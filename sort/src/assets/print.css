@@ -1,0 +1,25 @@
+.no-print {
+    display: none !important;
+}
+@page { 
+    size: landscape; 
+    margin: 0.5cm;
+}
+h2 {
+    font-size: 1.5rem !important;
+}
+.card .card-header .level-badge {
+    width: 15px !important;
+    font-size: 0.6rem !important;
+}
+.card .card-header .title {
+    margin-left: 17px !important;
+    height: 15px !important;
+    font-size: 0.6rem !important;
+}
+.card .card-block p {
+    font-size: 0.5rem !important;
+}
+.card {
+    page-break-inside: avoid;
+}
