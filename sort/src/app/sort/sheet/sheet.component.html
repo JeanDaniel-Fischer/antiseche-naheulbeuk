@@ -1,0 +1,59 @@
+<div class="no-print card">
+  <div class="card-header">
+    Sélection des niveaux de sorts
+  </div>
+  <div class="card-block">
+    <div class="row">
+      <div class="col-md-4">
+        <form ngForm>
+          <div class="form-control no-border" *ngFor="let cast of ['no-cast-1', 'no-cast-2', 'no-cast-3', 'no-cast-4', 'no-cast-5']">
+            <label class="custom-control custom-checkbox">
+              <input type="checkbox" name="cast" [(ngModel)]="noDisplayCast[cast]" class="custom-control-input">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Ne pas afficher les sorts de niveau {{cast.replace('no-cast-', '')}}</span>
+            </label>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-4">
+        <form ngForm>
+          <div class="form-control no-border" *ngFor="let cast of ['no-cast-6', 'no-cast-7', 'no-cast-8', 'no-cast-9', 'no-cast-10']">
+            <label class="custom-control custom-checkbox">
+              <input type="checkbox" name="cast" [(ngModel)]="noDisplayCast[cast]" class="custom-control-input">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Ne pas afficher les sorts de niveau {{cast.replace('no-cast-', '')}}</span>
+            </label>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-4">
+        <form ngForm>
+          <div class="form-control no-border" *ngFor="let cast of ['no-cast-11', 'no-cast-12', 'no-cast-13', 'no-cast-14', 'no-cast-15']">
+            <label class="custom-control custom-checkbox">
+              <input type="checkbox" name="cast" [(ngModel)]="noDisplayCast[cast]" class="custom-control-input">
+              <span class="custom-control-indicator"></span>
+              <span class="custom-control-description">Ne pas afficher les sorts de niveau {{cast.replace('no-cast-', '')}}</span>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div [ngClass]="noDisplayCast">
+  <div class="row">
+    <div class="col-md-4">
+      <h2>Attaque</h2>
+
+    </div>
+    <div class="col-md-4">
+      <h2>Soutien</h2>
+      
+    </div>
+    <div class="col-md-4">
+      <h2>Utilitaire</h2>
+      
+    </div>
+  </div>
+</div>
