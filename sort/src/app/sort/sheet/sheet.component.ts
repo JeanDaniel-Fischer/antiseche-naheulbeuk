@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AdathieService } from '../adathie.service';
 
 @Component({
   selector: 'app-sheet',
@@ -24,9 +25,18 @@ export class SheetComponent implements OnInit {
     'no-cast-15': false
   };
 
-  constructor() { }
+  public attackSpell: any[];
+  public supportSpell: any[];
+  public utilitySpell: any[];
+
+  constructor(
+    private adathieService: AdathieService
+  ) { }
 
   ngOnInit() {
+    this.attackSpell = this.adathieService.GetAttack();
+    this.supportSpell = this.adathieService.GetSupport();
+    this.utilitySpell = this.adathieService.GetUtility();
   }
 
 }
