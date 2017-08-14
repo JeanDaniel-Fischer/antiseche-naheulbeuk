@@ -1,8 +1,10 @@
-<div class="menu no-print">
-
-</div>
+<nav class="nav no-print">
+  <img class="brand" src="favicon.png">
+  <a class="nav-link" routerLink="/adathie" routerLinkActive="active">Adathie (categories)</a>
+  <a class="nav-link" routerLink="/adathie-flow" routerLinkActive="active">Adathie (flow)</a>
+</nav>
 
 <div class="container-fluid">
   <h1 class="no-print">Générateur d'aide de sort <button class="btn btn-default" (click)="printPage()">Imprimer</button></h1>
-  <app-sheet></app-sheet>
+  <router-outlet></router-outlet>
 </div>

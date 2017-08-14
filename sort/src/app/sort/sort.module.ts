@@ -4,6 +4,7 @@ import { SheetComponent } from './sheet/sheet.component';
 import { FormsModule } from '@angular/forms';
 import { CastComponent } from './cast/cast.component';
 import { AdathieService } from './adathie.service';
+import { SheetFlowComponent } from './sheet-flow/sheet-flow.component';
 
 @NgModule({
   imports: [
@@ -11,7 +12,7 @@ import { AdathieService } from './adathie.service';
     FormsModule
   ],
   providers: [AdathieService],
-  exports: [SheetComponent],
-  declarations: [SheetComponent, CastComponent]
+  exports: [SheetComponent, SheetFlowComponent],
+  declarations: [SheetComponent, CastComponent, SheetFlowComponent]
 })
 export class SortModule { }

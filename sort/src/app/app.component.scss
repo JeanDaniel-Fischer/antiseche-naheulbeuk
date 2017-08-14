@@ -1,0 +1,14 @@
+nav.nav {
+    background: black;
+    .nav-link {
+        color: white;
+    }
+    .active {
+        background-color: gray;
+    }
+    .brand {
+        filter: invert(100%);
+        width: 40px;
+        height: 40px;
+    }
+}
