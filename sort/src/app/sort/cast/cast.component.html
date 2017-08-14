@@ -1,0 +1,34 @@
+<div class="{{'cast-' + level}} card">
+  <div class="card-header">
+    <div class="level-badge">{{level}}</div><div class="title">{{name}}</div>
+  </div>
+  <div class="card-block">
+    <p *ngIf="cost">
+      <i class="fa fa-star-o" aria-hidden="true"></i>{{cost}}
+    </p>
+    <p *ngIf="castingTime">
+      <i class="fa fa-hourglass-end" aria-hidden="true"></i>{{castingTime}} assauts
+    </p>
+    <p *ngIf="test">
+      <i class="fa fa-cubes" aria-hidden="true"></i>{{test}}
+    </p>
+    <p *ngIf="testControl">
+      <i class="fa fa-hand-rock-o" aria-hidden="true"></i>{{testControl}}
+    </p>
+    <p *ngIf="material">
+      <i class="fa fa-flask" aria-hidden="true"></i>{{material}}
+    </p>
+    <p *ngIf="damage">
+      <i class="fa fa-gavel" aria-hidden="true"></i>{{damage}}
+    </p>
+    <p *ngIf="note">
+      <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>{{note}}
+    </p>
+    <p *ngIf="critSuccess">
+      <i class="fa fa-thumbs-up" aria-hidden="true"></i>{{critSuccess}}
+    </p>
+    <p *ngIf="critFail">
+      <i class="fa fa-thumbs-down" aria-hidden="true"></i>{{critFail}}
+    </p>
+  </div>
+</div>

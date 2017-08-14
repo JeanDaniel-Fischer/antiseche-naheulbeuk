@@ -1,0 +1,32 @@
+.card {
+    margin-bottom: 5px;
+    .card-header {
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+        .level-badge {
+            position: absolute;
+            width: 28px;
+            border: gray solid 2px;
+            border-radius: 28px;
+            text-align: center;
+            top: 10px;
+        }
+        .title {
+            height: 28px;
+            margin-left: 30px;
+        }
+    }
+    .card-block {
+        padding-left: 0.25rem;
+        display: flex;
+        flex-wrap: wrap;
+        p {
+            margin: 0;
+            flex-grow: 1;
+            min-width: 50%;
+            i {
+                margin-right: 5px;
+            }
+        }
+    }
+}
