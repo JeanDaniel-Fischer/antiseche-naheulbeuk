@@ -269,15 +269,15 @@ export class AdathieService {
 
   constructor() { }
 
-  GetAttack() {
+  GetAttack(): any[] {
     return this.attackSpell;
   }
 
-  GetSupport() {
+  GetSupport(): any[] {
     return this.supportSpell;
   }
 
-  GetUtility() {
+  GetUtility(): any[] {
     return this.utilitySpell;
   }
 }
