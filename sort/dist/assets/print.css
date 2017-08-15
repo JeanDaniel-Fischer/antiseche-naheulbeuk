@@ -23,3 +23,7 @@ h2 {
 .card {
     page-break-inside: avoid;
 }
+.caption {
+    font-size: 0.5rem !important;
+    max-height: 3rem !important;
+}
