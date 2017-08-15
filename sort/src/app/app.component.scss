@@ -12,3 +12,19 @@ nav.nav {
         height: 40px;
     }
 }
+.footer {
+    height: 60px;
+    background-color: #f5f5f5;
+    .footer-content {
+        padding-top: 18px;
+        display: flex;
+        .left {
+            text-align: left;
+            flex: 1;
+        }
+        .right {
+            text-align: right;
+            flex: 1;
+        }
+    }
+}
