@@ -27,6 +27,7 @@ export class SheetFlowComponent implements OnInit {
     'no-support': false,
     'no-utility': false
   };
+  public caption = false;
   public spells: any[];
   constructor(
     private adathieService: AdathieService

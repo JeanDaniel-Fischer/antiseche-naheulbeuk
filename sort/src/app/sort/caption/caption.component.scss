@@ -1,0 +1,50 @@
+@import '../../../variables';
+
+.caption {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: gray solid 1px;
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 0.1rem;
+    margin-bottom: 0.5rem;
+
+    flex-direction: column;
+    max-height: 6rem;
+
+    li {
+        list-style: none;
+        margin: 0 5px;
+
+        i {
+            width: 28px;
+            margin-right: 5px;
+            text-align: center;
+        }
+
+        .attack {
+            color: $attack;
+        }
+        .support {
+            color: $support;
+        }
+        .utility {
+            color: $utility;
+        }
+    }
+
+    .level {
+        display: flex;
+        .level-badge {
+            width: 28px;
+            border: gray solid 2px;
+            border-radius: 28px;
+            text-align: center;
+            top: 10px;
+            margin-bottom: 0;
+        }
+        .level-caption {
+            padding-left: 5px;
+        }
+    }
+}

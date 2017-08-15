@@ -1,0 +1,15 @@
+<ul class="caption">
+  <li class="level"><p class="level-badge">1</p><span class="level-caption">Niveau nécéssaire</span></li>
+  <li><i class="fa fa-star-o" aria-hidden="true"></i>Coût du sort</li>
+  <li><i class="fa fa-hourglass-end" aria-hidden="true"></i>Nombre d'assauts de préparation</li>
+  <li><i class="fa fa-cubes" aria-hidden="true"></i>Epreuve</li>
+  <li><i class="fa fa-hand-rock-o" aria-hidden="true"></i>Epreuve de contrôle</li>
+  <li><i class="fa fa-flask" aria-hidden="true"></i>Ingrédients requis</li>
+  <li><i class="fa fa-gavel" aria-hidden="true"></i>Dégats/Effets</li>
+  <li><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Note diverse</li>
+  <li><i class="fa fa-thumbs-up" aria-hidden="true"></i>Conséquence succés critique</li>
+  <li><i class="fa fa-thumbs-down" aria-hidden="true"></i>Conséquence d'échec critique</li>
+  <li *ngIf="color"><i class="fa fa-square attack" aria-hidden="true"></i>Sort d'attaque</li>
+  <li *ngIf="color"><i class="fa fa-square support" aria-hidden="true"></i>Sort de soutien</li>
+  <li *ngIf="color"><i class="fa fa-square utility" aria-hidden="true"></i>Sort utilitaire</li>
+</ul>

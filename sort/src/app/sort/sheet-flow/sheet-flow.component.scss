@@ -1,3 +1,5 @@
+@import '../../../variables';
+
 .filters {
     margin-bottom: 5px;
     .form-control.no-border {
@@ -17,13 +19,13 @@
             height: 100%;
         }
         .card.attack .card-header {
-            background-color: rgba(173, 29, 29, 0.5);
+            background-color: $attack;
         }
         .card.support .card-header {
-            background-color: rgba(24, 177, 48, 0.5);
+            background-color: $support;
         }
         .card.utility .card-header {
-            background-color: rgba(29, 29, 173, 0.5);
+            background-color: $utility;
         }
     }
 }

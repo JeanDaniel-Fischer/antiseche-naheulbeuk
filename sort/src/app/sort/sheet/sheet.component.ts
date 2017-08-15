@@ -24,6 +24,7 @@ export class SheetComponent implements OnInit {
     'no-cast-14': false,
     'no-cast-15': false
   };
+  public caption = false;
 
   public attackSpell: any[];
   public supportSpell: any[];
