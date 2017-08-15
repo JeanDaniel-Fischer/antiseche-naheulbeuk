@@ -62,6 +62,6 @@
 <app-caption [ngClass]="{ 'no-caption': caption }" [color]="true">
 </app-caption>
 
-<div [ngClass]="noDisplayCast" class="flow">
-  <app-cast *ngFor="let spell of spells" [spell]="spell" class="{{spell.category}}"></app-cast>
+<div class="flow" [ngClass]="noDisplayCast">
+  <app-cast *ngFor="let spell of spells" [spell]="spell" class="{{spell.category}}" [ngClass]="{'no-cast': noDisplayCast['no-cast-' + spell.level]}"></app-cast>
 </div>
