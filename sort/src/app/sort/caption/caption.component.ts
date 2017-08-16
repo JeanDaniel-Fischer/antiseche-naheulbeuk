@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CaptionComponent implements OnInit {
 
-  @Input() color: boolean;
+  @Input() categories: string[];
   constructor() { }
 
   ngOnInit() {

@@ -29,6 +29,7 @@ export class SheetFlowComponent implements OnInit {
   };
   public caption = false;
   public spells: any[];
+  public categories: any[];
   constructor(
     private adathieService: AdathieService
   ) { }
@@ -46,6 +47,7 @@ export class SheetFlowComponent implements OnInit {
         return 0;
       }
     });
+    this.categories = this.adathieService.GetCategory();
   }
 
 }

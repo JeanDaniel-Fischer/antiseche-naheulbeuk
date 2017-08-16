@@ -39,11 +39,11 @@
       </div>
       <div class="col-md-3">
         <form ngForm>
-          <div class="form-control no-border" *ngFor="let cat of ['no-attack', 'no-support', 'no-utility']">
+          <div class="form-control no-border" *ngFor="let cat of categories">
             <label class="custom-control custom-checkbox">
-              <input type="checkbox" name="cat" [(ngModel)]="noDisplayCast[cat]" class="custom-control-input">
+              <input type="checkbox" name="cat" [(ngModel)]="noDisplayCast['no-' + cat]" class="custom-control-input">
               <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Ne pas afficher les sorts de la catégorie {{cat.replace('no-', '')}}</span>
+              <span class="custom-control-description">Ne pas afficher les sorts de la catégorie {{cat}}</span>
             </label>
           </div>
           <div class="form-control no-border">
@@ -59,7 +59,7 @@
   </div>
 </div>
 
-<app-caption [ngClass]="{ 'no-caption': caption }" [color]="true">
+<app-caption [ngClass]="{ 'no-caption': caption }" [categories]="categories">
 </app-caption>
 
 <div class="flow" [ngClass]="noDisplayCast">

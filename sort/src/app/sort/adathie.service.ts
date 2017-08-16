@@ -267,6 +267,8 @@ export class AdathieService {
     }
   ];
 
+  categories = [ 'attack', 'support', 'utility' ];
+
   constructor() { }
 
   GetAttack(): any[] {
@@ -279,5 +281,9 @@ export class AdathieService {
 
   GetUtility(): any[] {
     return this.utilitySpell;
+  }
+
+  GetCategory(): any[] {
+    return this.categories;
   }
 }
