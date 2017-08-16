@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AdathieService } from '../adathie.service';
+import { SpellBookService } from '../spell-book.service';
 
 @Component({
   selector: 'app-sheet',
@@ -31,13 +31,17 @@ export class SheetComponent implements OnInit {
   public utilitySpell: any[];
 
   constructor(
-    private adathieService: AdathieService
+    private spellBookService: SpellBookService
   ) { }
 
   ngOnInit() {
-    this.attackSpell = this.adathieService.GetAttack();
-    this.supportSpell = this.adathieService.GetSupport();
-    this.utilitySpell = this.adathieService.GetUtility();
+    this.spellBookService.GetSpellBook('adathie').subscribe(
+      (book) => {
+        this.attackSpell = book.GetSpellsByCategory('attack');
+        this.supportSpell = book.GetSpellsByCategory('support');
+        this.utilitySpell = book.GetSpellsByCategory('utility');
+      }
+    );
   }
 
 }

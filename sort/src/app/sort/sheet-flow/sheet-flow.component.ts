@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AdathieService } from '../adathie.service';
+import { SpellBookService } from '../spell-book.service';
 
 @Component({
   selector: 'app-sheet-flow',
@@ -31,23 +31,16 @@ export class SheetFlowComponent implements OnInit {
   public spells: any[];
   public categories: any[];
   constructor(
-    private adathieService: AdathieService
+    private spellBookService: SpellBookService
   ) { }
 
   ngOnInit() {
-    this.spells = this.adathieService.GetAttack()
-      .concat(this.adathieService.GetSupport())
-      .concat(this.adathieService.GetUtility())
-      .sort((a: any, b: any) => {
-      if (a.level < b.level) {
-        return -1;
-      } else if (a.level > b.level) {
-        return 1;
-      } else {
-        return 0;
+    this.spellBookService.GetSpellBook('adathie').subscribe(
+      (book) => {
+        this.spells = book.GetAllSortByLevel();
+        this.categories = book.GetCategories();
       }
-    });
-    this.categories = this.adathieService.GetCategory();
+    );
   }
 
 }

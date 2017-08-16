@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SheetComponent } from './sheet/sheet.component';
 import { FormsModule } from '@angular/forms';
 import { CastComponent } from './cast/cast.component';
-import { AdathieService } from './adathie.service';
+import { SpellBookService } from './spell-book.service';
 import { SheetFlowComponent } from './sheet-flow/sheet-flow.component';
 import { CaptionComponent } from './caption/caption.component';
 
@@ -12,7 +12,7 @@ import { CaptionComponent } from './caption/caption.component';
     CommonModule,
     FormsModule
   ],
-  providers: [AdathieService],
+  providers: [SpellBookService],
   exports: [SheetComponent, SheetFlowComponent],
   declarations: [SheetComponent, CastComponent, SheetFlowComponent, CaptionComponent]
 })
