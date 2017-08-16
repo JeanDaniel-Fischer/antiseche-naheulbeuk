@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SpellBookService } from '../spell-book.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-sheet-flow',
@@ -30,12 +31,16 @@ export class SheetFlowComponent implements OnInit {
   public caption = false;
   public spells: any[];
   public categories: any[];
+  public book: string;
   constructor(
-    private spellBookService: SpellBookService
-  ) { }
+    private spellBookService: SpellBookService,
+    route: ActivatedRoute
+  ) {
+    this.book = route.snapshot.params['book'];
+   }
 
   ngOnInit() {
-    this.spellBookService.GetSpellBook('adathie').subscribe(
+    this.spellBookService.GetSpellBook(this.book).subscribe(
       (book) => {
         this.spells = book.GetAllSortByLevel();
         this.categories = book.GetCategories();

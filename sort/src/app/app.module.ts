@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import {HttpModule} from '@angular/http';
+import { BsDropdownModule } from 'ngx-bootstrap';
 
 import { AppComponent } from './app.component';
 import { SortModule } from './sort/sort.module';
@@ -10,10 +11,10 @@ import { SheetFlowComponent } from './sort/sheet-flow/sheet-flow.component';
 import { SheetComponent } from './sort/sheet/sheet.component';
 
 const appRoutes: Routes = [
-  { path: 'adathie', component: SheetComponent },
-  { path: 'adathie-flow',      component: SheetFlowComponent },
+  { path: 'par-categorie/:book', component: SheetComponent },
+  { path: 'par-niveau/:book',      component: SheetFlowComponent },
   { path: '',
-    redirectTo: '/adathie',
+    redirectTo: '/par-categorie/adathie',
     pathMatch: 'full'
   },
   { path: '**', redirectTo: '/adathie' }
@@ -28,6 +29,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule,
     SortModule,
+    BsDropdownModule.forRoot(),
     RouterModule.forRoot(appRoutes, {
       useHash: true
     })

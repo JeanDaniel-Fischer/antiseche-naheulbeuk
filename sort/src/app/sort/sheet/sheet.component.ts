@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SpellBookService } from '../spell-book.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-sheet',
@@ -30,12 +31,17 @@ export class SheetComponent implements OnInit {
   public supportSpell: any[];
   public utilitySpell: any[];
 
+  public book: string;
+
   constructor(
-    private spellBookService: SpellBookService
-  ) { }
+    private spellBookService: SpellBookService,
+    route: ActivatedRoute
+  ) {
+    this.book = route.snapshot.params['book'];
+  }
 
   ngOnInit() {
-    this.spellBookService.GetSpellBook('adathie').subscribe(
+    this.spellBookService.GetSpellBook(this.book).subscribe(
       (book) => {
         this.attackSpell = book.GetSpellsByCategory('attack');
         this.supportSpell = book.GetSpellsByCategory('support');
