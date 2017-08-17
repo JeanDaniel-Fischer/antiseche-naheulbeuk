@@ -51,3 +51,12 @@ Le contenue du fichier doit être de la forme (une valeur à null ne sera pas af
     ]
 }
 ```
+
+## Tester l'application
+L'application utilise le cli angular. Pour tester simplement les modifications, il suffit de se déplacer à la racine de l'application : le dossier sort.
+
+La commande `npm install` permet d'installer toutes les dépendances.
+
+La commande `ng serve` lance l'application localement à l'adresse [localhost:4200](http://localhost:4200).
+
+Si vous n'avez pas encore la commande ng d'installer suivez les instructions sur le [github du cli angular](https://github.com/angular/angular-cli).
