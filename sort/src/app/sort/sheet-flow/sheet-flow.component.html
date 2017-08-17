@@ -43,7 +43,7 @@
             <label class="custom-control custom-checkbox">
               <input type="checkbox" name="cat" [(ngModel)]="noDisplayCast['no-' + cat]" class="custom-control-input">
               <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Ne pas afficher les sorts de la catégorie {{cat}}</span>
+              <span class="custom-control-description">{{'filters.' + cat | translate}}</span>
             </label>
           </div>
           <div class="form-control no-border">

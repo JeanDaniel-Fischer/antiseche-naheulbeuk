@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SpellBookService } from './sort/spell-book.service';
+import { TranslateService } from 'ng2-translate';
 
 @Component({
   selector: 'app-root',
@@ -11,8 +12,12 @@ export class AppComponent implements OnInit {
   public books: string[];
 
   constructor(
-    private spellBookService: SpellBookService
-  ) {}
+    private spellBookService: SpellBookService,
+    private translate: TranslateService
+  ) {
+    translate.setDefaultLang('fr');
+    translate.use('fr');
+  }
 
   ngOnInit(): void {
     this.books = this.spellBookService.availableBooks;

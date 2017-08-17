@@ -9,5 +9,5 @@
   <li><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Note diverse</li>
   <li><i class="fa fa-thumbs-up" aria-hidden="true"></i>Conséquence succés critique</li>
   <li><i class="fa fa-thumbs-down" aria-hidden="true"></i>Conséquence d'échec critique</li>
-  <li *ngFor="let category of categories"><i class="fa fa-square {{category}}" aria-hidden="true"></i>Sort d'{{category}}</li>
+  <li *ngFor="let category of categories"><i class="fa fa-square {{category}}" aria-hidden="true"></i>{{'caption.' + category | translate}}</li>
 </ul>

@@ -6,10 +6,12 @@ import { CastComponent } from './cast/cast.component';
 import { SpellBookService } from './spell-book.service';
 import { SheetFlowComponent } from './sheet-flow/sheet-flow.component';
 import { CaptionComponent } from './caption/caption.component';
+import { TranslateModule } from 'ng2-translate';
 
 @NgModule({
   imports: [
     CommonModule,
+    TranslateModule,
     FormsModule
   ],
   providers: [SpellBookService],

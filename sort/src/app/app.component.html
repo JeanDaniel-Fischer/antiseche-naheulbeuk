@@ -8,7 +8,7 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item" dropdown *ngFor="let book of books">
-        <a class="nav-link" href dropdownToggle (click)="false">{{book}}</a>
+        <a class="nav-link" href dropdownToggle (click)="false">{{book | translate}}</a>
         <ul *dropdownMenu class="dropdown-menu">
           <li><a class="dropdown-item" routerLink="{{'/par-categorie/'+book}}" routerLinkActive="active">Par catégories</a></li>
           <li><a class="dropdown-item" routerLink="{{'/par-niveau/'+book}}" routerLinkActive="active">Par niveaux</a></li>

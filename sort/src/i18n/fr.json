@@ -1,0 +1,13 @@
+{
+    "adathie": "Adathie",
+    "filters": {
+        "attack": "Ne pas afficher les sorts d'attaque",
+        "support": "Ne pas afficher les sorts de soutien",
+        "utility": "Ne pas afficher les sorts utilitaires"
+    },
+    "caption": {
+        "attack": "Sort d'attaque",
+        "support": "Sort de soutien",
+        "utility": "Sort d'aide à l'aventure"
+    }
+}

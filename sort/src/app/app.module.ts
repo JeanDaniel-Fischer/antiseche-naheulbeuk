@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import {HttpModule} from '@angular/http';
 import { BsDropdownModule } from 'ngx-bootstrap';
+import { TranslateModule } from 'ng2-translate';
 
 import { AppComponent } from './app.component';
 import { SortModule } from './sort/sort.module';
@@ -17,7 +18,7 @@ const appRoutes: Routes = [
     redirectTo: '/par-categorie/adathie',
     pathMatch: 'full'
   },
-  { path: '**', redirectTo: '/adathie' }
+  { path: '**', redirectTo: '/par-categorie/adathie' }
 ];
 
 @NgModule({
@@ -29,6 +30,7 @@ const appRoutes: Routes = [
     FormsModule,
     HttpModule,
     SortModule,
+    TranslateModule.forRoot(),
     BsDropdownModule.forRoot(),
     RouterModule.forRoot(appRoutes, {
       useHash: true
