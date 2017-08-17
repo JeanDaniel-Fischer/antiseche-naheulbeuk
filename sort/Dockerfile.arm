@@ -1,4 +1,5 @@
 FROM hypriot/rpi-busybox-httpd
 COPY /dist/* /www/
 COPY /dist/i18n/* /www/i18n/
+COPY /dist/assets/* /www/assets/
 EXPOSE 80
