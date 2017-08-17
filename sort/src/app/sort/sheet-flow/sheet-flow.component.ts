@@ -8,22 +8,22 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./sheet-flow.component.scss']
 })
 export class SheetFlowComponent implements OnInit {
-  public noDisplayCast = {
-    'no-cast-1': false,
-    'no-cast-2': false,
-    'no-cast-3': false,
-    'no-cast-4': false,
-    'no-cast-5': false,
-    'no-cast-6': false,
-    'no-cast-7': false,
-    'no-cast-8': false,
-    'no-cast-9': false,
-    'no-cast-10': false,
-    'no-cast-11': false,
-    'no-cast-12': false,
-    'no-cast-13': false,
-    'no-cast-14': false,
-    'no-cast-15': false,
+  public noDisplaySpell = {
+    'no-spell-1': false,
+    'no-spell-2': false,
+    'no-spell-3': false,
+    'no-spell-4': false,
+    'no-spell-5': false,
+    'no-spell-6': false,
+    'no-spell-7': false,
+    'no-spell-8': false,
+    'no-spell-9': false,
+    'no-spell-10': false,
+    'no-spell-11': false,
+    'no-spell-12': false,
+    'no-spell-13': false,
+    'no-spell-14': false,
+    'no-spell-15': false,
     'no-attack': false,
     'no-support': false,
     'no-utility': false

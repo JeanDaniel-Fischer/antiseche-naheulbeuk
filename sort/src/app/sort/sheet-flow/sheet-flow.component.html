@@ -6,33 +6,33 @@
     <div class="row">
       <div class="col-md-3">
         <form ngForm>
-          <div class="form-control no-border" *ngFor="let cast of ['no-cast-1', 'no-cast-2', 'no-cast-3', 'no-cast-4', 'no-cast-5']">
+          <div class="form-control no-border" *ngFor="let spell of ['no-spell-1', 'no-spell-2', 'no-spell-3', 'no-spell-4', 'no-spell-5']">
             <label class="custom-control custom-checkbox">
-              <input type="checkbox" name="cast" [(ngModel)]="noDisplayCast[cast]" class="custom-control-input">
+              <input type="checkbox" name="spell" [(ngModel)]="noDisplaySpell[spell]" class="custom-control-input">
               <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Ne pas afficher les sorts de niveau {{cast.replace('no-cast-', '')}}</span>
+              <span class="custom-control-description">Ne pas afficher les sorts de niveau {{spell.replace('no-spell-', '')}}</span>
             </label>
           </div>
         </form>
       </div>
       <div class="col-md-3">
         <form ngForm>
-          <div class="form-control no-border" *ngFor="let cast of ['no-cast-6', 'no-cast-7', 'no-cast-8', 'no-cast-9', 'no-cast-10']">
+          <div class="form-control no-border" *ngFor="let spell of ['no-spell-6', 'no-spell-7', 'no-spell-8', 'no-spell-9', 'no-spell-10']">
             <label class="custom-control custom-checkbox">
-              <input type="checkbox" name="cast" [(ngModel)]="noDisplayCast[cast]" class="custom-control-input">
+              <input type="checkbox" name="spell" [(ngModel)]="noDisplaySpell[spell]" class="custom-control-input">
               <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Ne pas afficher les sorts de niveau {{cast.replace('no-cast-', '')}}</span>
+              <span class="custom-control-description">Ne pas afficher les sorts de niveau {{spell.replace('no-spell-', '')}}</span>
             </label>
           </div>
         </form>
       </div>
       <div class="col-md-3">
         <form ngForm>
-          <div class="form-control no-border" *ngFor="let cast of ['no-cast-11', 'no-cast-12', 'no-cast-13', 'no-cast-14', 'no-cast-15']">
+          <div class="form-control no-border" *ngFor="let spell of ['no-spell-11', 'no-spell-12', 'no-spell-13', 'no-spell-14', 'no-spell-15']">
             <label class="custom-control custom-checkbox">
-              <input type="checkbox" name="cast" [(ngModel)]="noDisplayCast[cast]" class="custom-control-input">
+              <input type="checkbox" name="spell" [(ngModel)]="noDisplaySpell[spell]" class="custom-control-input">
               <span class="custom-control-indicator"></span>
-              <span class="custom-control-description">Ne pas afficher les sorts de niveau {{cast.replace('no-cast-', '')}}</span>
+              <span class="custom-control-description">Ne pas afficher les sorts de niveau {{spell.replace('no-spell-', '')}}</span>
             </label>
           </div>
         </form>
@@ -41,14 +41,14 @@
         <form ngForm>
           <div class="form-control no-border" *ngFor="let cat of categories">
             <label class="custom-control custom-checkbox">
-              <input type="checkbox" name="cat" [(ngModel)]="noDisplayCast['no-' + cat]" class="custom-control-input">
+              <input type="checkbox" name="cat" [(ngModel)]="noDisplaySpell['no-' + cat]" class="custom-control-input">
               <span class="custom-control-indicator"></span>
               <span class="custom-control-description">{{'filters.' + cat | translate}}</span>
             </label>
           </div>
           <div class="form-control no-border">
             <label class="custom-control custom-checkbox">
-              <input type="checkbox" name="cast" [(ngModel)]="caption" class="custom-control-input">
+              <input type="checkbox" name="spell" [(ngModel)]="caption" class="custom-control-input">
               <span class="custom-control-indicator"></span>
               <span class="custom-control-description">Ne pas afficher la légende</span>
             </label>
@@ -62,6 +62,6 @@
 <app-caption [ngClass]="{ 'no-caption': caption }" [categories]="categories">
 </app-caption>
 
-<div class="flow" [ngClass]="noDisplayCast">
-  <app-cast *ngFor="let spell of spells" [spell]="spell" class="{{spell.category}}" [ngClass]="{'no-cast': noDisplayCast['no-cast-' + spell.level]}"></app-cast>
+<div class="flow" [ngClass]="noDisplaySpell">
+  <app-spell *ngFor="let spell of spells" [spell]="spell" class="{{spell.category}}" [ngClass]="{'no-spell': noDisplaySpell['no-spell-' + spell.level]}"></app-spell>
 </div>
