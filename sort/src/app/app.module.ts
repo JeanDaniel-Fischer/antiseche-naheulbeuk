@@ -7,9 +7,9 @@ import { BsDropdownModule } from 'ngx-bootstrap';
 import { TranslateModule } from 'ng2-translate';
 
 import { AppComponent } from './app.component';
-import { SortModule } from './sort/sort.module';
-import { SheetFlowComponent } from './sort/sheet-flow/sheet-flow.component';
-import { SheetComponent } from './sort/sheet/sheet.component';
+import { SpellBookModule } from './spell-book/spell-book.module';
+import { SheetFlowComponent } from './spell-book/sheet-flow/sheet-flow.component';
+import { SheetComponent } from './spell-book/sheet/sheet.component';
 
 const appRoutes: Routes = [
   { path: 'par-categorie/:book', component: SheetComponent },
@@ -29,7 +29,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    SortModule,
+    SpellBookModule,
     TranslateModule.forRoot(),
     BsDropdownModule.forRoot(),
     RouterModule.forRoot(appRoutes, {

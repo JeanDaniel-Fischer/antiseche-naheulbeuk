@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SpellBookService } from './sort/spell-book.service';
+import { SpellBookService } from './spell-book/spell-book.service';
 import { TranslateService } from 'ng2-translate';
 
 @Component({
