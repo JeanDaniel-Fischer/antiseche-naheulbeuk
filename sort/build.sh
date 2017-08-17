@@ -1,2 +1,2 @@
 #!/bin/sh
-docker build -t jdfischer/naheulbeuk:latest -f Dockerfile .
+docker build -t jdfischer/naheulbeuk:rpi-latest -f Dockerfile.arm .
