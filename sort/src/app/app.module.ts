@@ -32,9 +32,7 @@ const appRoutes: Routes = [
     SpellBookModule,
     TranslateModule.forRoot(),
     BsDropdownModule.forRoot(),
-    RouterModule.forRoot(appRoutes, {
-      useHash: true
-    })
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
